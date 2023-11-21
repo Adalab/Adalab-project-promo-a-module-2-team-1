@@ -1,5 +1,15 @@
+header {
+  font-size: 62.5%;
+}
 .page__header {
+  height: 11.1rem;
   display: flex;
   justify-content: space-evenly;
   margin-bottom: 3rem;
+}
+.header__logo {
+  margin-left: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
