@@ -1,8 +1,5 @@
-<header class="header">
-    <div class="header__container">
-        <a href="index.html">
-            <?xml version="1.0" encoding="UTF-8"?>
-<svg class="header__img" width="417px" height="107px" viewBox="0 0 417 107" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="417px" height="107px" viewBox="0 0 417 107" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
     <title>Tarjetas molonas</title>
     <desc>Created with Sketch.</desc>
@@ -29,6 +26,3 @@
         </g>
     </g>
 </svg>
-        </a>
-    </div>
-  </header>

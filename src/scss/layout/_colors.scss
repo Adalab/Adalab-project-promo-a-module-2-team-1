@@ -1,0 +1,58 @@
+
+fieldset {
+    border: solid black 1px;
+    padding: 27px 20px 10px 20px;
+}
+.design-pantone {
+    display: flex;
+    justify-content: space-between;
+}
+.main-pantone {
+    
+    .pantone__select {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 20px;
+        .pantone__radio {
+            margin-right: 10px;
+        }
+        .pantone__colors {
+            display: flex;
+            .pantone__box {
+                width: 30px;
+                height: 25px;
+            }
+        }
+    }
+    
+}
+
+
+
+.blue1 {
+    background-color: $pantone1-1;
+}
+.blue2 {
+    background-color: $pantone1-2;
+}
+.blue3 {
+    background-color: $pantone1-3;
+}
+.red1 {
+    background-color: $pantone2-1;
+}
+.red2 {
+    background-color: $pantone2-2;
+}
+.red3 {
+    background-color: $pantone2-3;
+}
+.mix1 {
+    background-color: $pantone3-1;
+}
+.mix2 {
+    background-color: $pantone3-2;
+}
+.mix3 {
+    background-color: $pantone3-3;
+}
