@@ -1,15 +1,29 @@
 header {
-  font-size: 62.5%;
-}
-.page__header {
-  height: 11.1rem;
-  display: flex;
-  justify-content: space-evenly;
-  margin-bottom: 3rem;
-}
-.header__logo {
-  margin-left: 4rem;
-  display: flex;
-  justify-content: center;
-  align-items: centergit pull;
-}
+  /*   height: 110px; */
+    display: flex;
+    justify-content: center;
+  }
+  .header__container {
+    display: flex;
+    /* margin-left: 10rem; */
+    padding-top: 3rem;
+    padding-bottom: 2.8rem;
+  }
+  .header__img {
+    display: flex;
+  /*   width: 20rem; */
+  /*   height: 5rem; */
+  }
+  @media all and (min-width: 768px){
+    .header {
+      display: flex;
+      justify-content: left;
+      min-width: 768px;
+      width: 80%;
+      max-width: 1140px;
+      margin-inline: auto;
+    }
+    .header__img {
+      margin-left: 40px;
+    }
+  }
