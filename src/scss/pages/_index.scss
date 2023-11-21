@@ -1,23 +1,31 @@
 .landing {
     background-color: #f5f5f5;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
     &__img {
-        width: 100%;
-        padding: 35px;
+        width: 80vw;
+        margin: 30px auto;
     }
     &__title {
         font-family: $font-landing;
         font-size: 1.92rem;  
         text-align: center;
         color: $primary-color;
-        margin: 0 2.5rem;
     }
     &__text {
         font-family: $font-main;
         font-size: 1.28rem;
         text-align: center;
         color: $terciary-color;
-        margin: 5px 2.5rem;
+        margin: 5px 25px;
     }
     &__functions {
         display: flex;
@@ -25,7 +33,6 @@
         border: solid 1.6px $primary-color;
         margin: 2.5rem;
         justify-content: center;
-        text-align: center;
         height: 7.5rem;
     }
     &__button {
@@ -39,9 +46,9 @@
         line-height: 2.6;
         width: 13rem;
         height: 4.2rem;
-        margin: 30px auto;
         border-radius: 2.1rem;
-        
+        position: absolute;
+        bottom: 30px;
     }
 }
 .function{
@@ -59,5 +66,36 @@
         font-size: 1.28rem;
         color: $font-color;
         margin-top: 5px;  
+    }
+}
+
+@media (min-width: 768px) {
+    .landing {
+        &__title {
+            font-size: 2.4rem;  
+            text-align: center;
+        }
+        &__img {
+            width: 50vw;
+        }
+        &__text {
+            font-size: 1.6rem;
+            margin: 5px 25rem;
+        }
+        &__functions {
+            margin: 3rem 25rem;
+            height: 8.6rem;
+        }
+        &__button {
+            bottom: 60px;
+        }
+    }
+    .function{
+        &__img {
+            size: 40rem;
+        }
+        &__text {
+          font-size: 1.6rem;
+        }
     }
 }
