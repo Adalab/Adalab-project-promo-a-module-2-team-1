@@ -1,33 +1,67 @@
+.desing {
+    font-family: $font-main;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 20px 10px 20px;
 
-fieldset {
-    border: solid black 1px;
-    padding: 27px 20px 10px 20px;
+    &__option1 {
+        display: flex;
+    }
+    &__icon {
+        color: $primary-color;
+        font-size: 1.8rem;
+        margin-right: 1rem;
+    }
+    &__h1 {
+        font-size: 1.8rem;
+        color: $font-color;
+        font-weight: 600;
+    }
+    &__down {
+        font-size: 1.8rem;
+        color: $font-color;
+    }
 }
+    
+.pantone {
+    font-family: $font-main;
+    color: $font-color;
+    font-size: 1.4rem;
+    padding: 12px 20px 30px 39px;
+    
+    &__select {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 20px;
+    }
+
+    &__radio {
+        margin-right: 10px;
+    }
+    &__colors {
+        display: flex;
+    }
+    &__box {
+        width: 30px;
+        height: 25px;
+    }
+        
+    
+}
+
+   
+
 .design-pantone {
     display: flex;
     justify-content: space-between;
 }
-.main-pantone {
-    
-    .pantone__select {
-        display: flex;
-        justify-content: flex-end;
-        margin-bottom: 20px;
-        .pantone__radio {
-            margin-right: 10px;
-        }
-        .pantone__colors {
-            display: flex;
-            .pantone__box {
-                width: 30px;
-                height: 25px;
-            }
-        }
-    }
-    
+
+
+.icon_d {
+    size: 50px;
+    color: $primary-color; 
+   
 }
-
-
 
 .blue1 {
     background-color: $pantone1-1;
