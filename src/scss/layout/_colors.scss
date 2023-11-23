@@ -1,10 +1,14 @@
 .desing {
+    position: relative;
     font-family: $font-main;
-    display: flex;
-    justify-content: space-between;
     padding: 30px 20px 10px 20px;
+    &__header {
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+    }
 
-    &__option1 {
+    &__title {
         display: flex;
     }
     &__icon {
@@ -21,41 +25,42 @@
         font-size: 1.8rem;
         color: $font-color;
     }
-}
     
-.pantone {
-    font-family: $font-main;
-    color: $font-color;
-    font-size: 1.4rem;
-    padding: 12px 20px 30px 39px;
-    
-    &__select {
+    &__pantone {
+        font-family: $font-main;
+        color: $font-color;
+        font-size: 1.4rem;
+        padding: 12px 20px 30px 39px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__options {
+        display: flex;
+        flex-direction: column;
+    }
+    &__colors {
+        
         display: flex;
         justify-content: flex-end;
         margin-bottom: 20px;
     }
 
+
     &__radio {
         margin-right: 10px;
+        cursor: pointer;
     }
-    &__colors {
-        display: flex;
-    }
+   
     &__box {
         width: 30px;
         height: 25px;
     }
-        
+}
     
+.rotate {
+    transform: rotate(180deg);  ///arrow js
 }
-
-   
-
-.design-pantone {
-    display: flex;
-    justify-content: space-between;
-}
-
+    
 
 .icon_d {
     size: 50px;
