@@ -1,13 +1,13 @@
 .desing {
-    position: relative;
     font-family: $font-main;
-    padding: 30px 20px 10px 20px;
+    margin: 27px 20px 0px 20px;
+    
+    border-bottom: solid $color-border 1px;
     &__header {
-        cursor: pointer;
         display: flex;
         justify-content: space-between;
+        margin-bottom: 10px;
     }
-
     &__title {
         display: flex;
     }
@@ -24,28 +24,38 @@
     &__down {
         font-size: 1.8rem;
         color: $font-color;
+        cursor: pointer;
     }
     
     &__pantone {
         font-family: $font-main;
         color: $font-color;
         font-size: 1.4rem;
-        padding: 12px 20px 30px 39px;
+    
         display: flex;
         justify-content: space-between;
+    }
+    &__h2 {
+        margin-left: 19px;
+        margin-top: 12px;
     }
     &__options {
         display: flex;
         flex-direction: column;
+        margin-bottom: 30px;
+        margin-top: 21px; 
     }
     &__colors {
         
         display: flex;
         justify-content: flex-end;
-        margin-bottom: 20px;
+        
     }
 
-
+    &__colors2{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
     &__radio {
         margin-right: 10px;
         cursor: pointer;
@@ -57,8 +67,11 @@
     }
 }
     
-.rotate {
+.desing__rotate {
     transform: rotate(180deg);  ///arrow js
+}
+.desing__hidden {
+    display: none;
 }
     
 
