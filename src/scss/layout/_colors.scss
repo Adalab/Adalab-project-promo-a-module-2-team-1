@@ -1,33 +1,85 @@
-
-fieldset {
-    border: solid black 1px;
-    padding: 27px 20px 10px 20px;
-}
-.design-pantone {
-    display: flex;
-    justify-content: space-between;
-}
-.main-pantone {
+.desing {
+    font-family: $font-main;
+    margin: 27px 20px 0px 20px;
     
-    .pantone__select {
+    border-bottom: solid $color-border 1px;
+    &__header {
         display: flex;
-        justify-content: flex-end;
-        margin-bottom: 20px;
-        .pantone__radio {
-            margin-right: 10px;
-        }
-        .pantone__colors {
-            display: flex;
-            .pantone__box {
-                width: 30px;
-                height: 25px;
-            }
-        }
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+    &__title {
+        display: flex;
+    }
+    &__icon {
+        color: $primary-color;
+        font-size: 1.8rem;
+        margin-right: 1rem;
+    }
+    &__h1 {
+        font-size: 1.8rem;
+        color: $font-color;
+        font-weight: 600;
+    }
+    &__down {
+        font-size: 1.8rem;
+        color: $font-color;
+        cursor: pointer;
     }
     
+    &__pantone {
+        font-family: $font-main;
+        color: $font-color;
+        font-size: 1.4rem;
+    
+        display: flex;
+        justify-content: space-between;
+    }
+    &__h2 {
+        margin-left: 19px;
+        margin-top: 12px;
+    }
+    &__options {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+        margin-top: 21px; 
+    }
+    &__colors {
+        
+        display: flex;
+        justify-content: flex-end;
+        
+    }
+
+    &__colors2{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    &__radio {
+        margin-right: 10px;
+        cursor: pointer;
+    }
+   
+    &__box {
+        width: 30px;
+        height: 25px;
+    }
 }
+    
+.desing__rotate {
+    transform: rotate(180deg);  ///arrow js
+}
+.desing__hidden {
+    display: none;
+}
+    
 
-
+.icon_d {
+    size: 50px;
+    color: $primary-color; 
+   
+}
 
 .blue1 {
     background-color: $pantone1-1;
