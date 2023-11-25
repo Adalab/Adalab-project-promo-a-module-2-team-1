@@ -9,6 +9,11 @@ const pantoneElement = document.querySelector('.js_pantone');
 const sdownElement = document.querySelector('.js_sdown');
 const cardElement = document.querySelector('.js_card');
 
+const buttonCreateElement = document.querySelector('.js_button-create');
+const TwitterElement = document.querySelector('.js_twitter');
+
+
+
 
 ddownElement.addEventListener('click', (event) => {
     ddownElement.classList.toggle('desing__rotate')
@@ -25,6 +30,11 @@ sdownElement.addEventListener('click', (event) => {
 
 sdownElement.addEventListener('click', (event) => {
     cardElement.classList.toggle('share__hidden')
+});
+
+
+buttonCreateElement.addEventListener('click', (event) => {
+    TwitterElement.classList.toggle('share__hidden')
 });
 
 
