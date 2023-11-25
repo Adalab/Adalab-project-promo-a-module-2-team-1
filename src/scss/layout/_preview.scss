@@ -1,9 +1,11 @@
 .preview {
     padding: 5vh 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 240px;
+    grid-template-rows: 50px 1fr;
+    justify-content:center;
+    margin:auto;
     background-color: #dde9ed;
     font-family: $font-preview;
     font-size: 18px;
@@ -12,16 +14,26 @@
         order: 2;
         border-radius: 5px;
     }
-    /*
+    @media (min-width: 768px) {
+        width: 55%;
+    }
+
     &__reset {
         border: 2px solid white;
         background-color: transparent;
         border-radius: 20px;
-        padding: 5px 10px;
+        padding: 6px 12px;
         text-transform: uppercase;
         color: $font-color;
+        font-size: 12px;
+        margin-right: auto;
+        margin-bottom: 20px;
+        cursor: pointer;
+        .fa-regular {
+            margin-right: 5px;
+            color: $font-color;
+        }
     }
-    */
 
     .card {
         background-color: white;
@@ -36,11 +48,13 @@
             margin-bottom: 5px;
             font-size: 18px;
             color: $terciary-color;
+            text-decoration: none;
         }
         &__job {
             font-size: 16px;
             font-weight: 500;
             color: $font-color;
+            text-decoration: none;
         }
         &__image {
             width: 240px;
