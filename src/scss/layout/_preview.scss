@@ -74,3 +74,45 @@
         }
     }
 }
+
+.palette1 {
+    .card__name {
+      color: $pantone1-1;
+    }
+    .card__header {
+      border-left: 4px solid $pantone1-2;
+    }
+    .card__item {
+      border: 3px solid $pantone1-3;
+    }
+    .card__icon {
+      color: $pantone1-1;
+  }}
+  
+  .palette2 {
+      .card__name {
+        color: $pantone2-1;
+      }
+      .card__header {
+        border-left: 4px solid $pantone2-2;
+      }
+      .card__item {
+        border: 3px solid $pantone2-3;
+      }
+      .card__icon {
+        color: $pantone2-1;
+    }}
+  
+    .palette3 {
+      .card__name {
+        color: $pantone3-1;
+      }
+      .card__header {
+        border-left: 4px solid $pantone3-2;
+      }
+      .card__item {
+        border: 3px solid $pantone3-3;
+      }
+      .card__icon {
+        color: $pantone3-1;
+    }}
