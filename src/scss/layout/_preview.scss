@@ -3,8 +3,8 @@
     height: 100%;
     display: grid;
     grid-template-columns: 240px;
-    grid-template-rows: 50px 1fr;
     justify-content:center;
+    align-content: center;
     margin:auto;
     background-color: #dde9ed;
     font-family: $font-preview;
@@ -36,6 +36,7 @@
     }
 
     .card {
+        height: fit-content;
         background-color: white;
         box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.35), 0 1px 3px 0 rgba(0, 0, 0, 0.35);
         &__header {
