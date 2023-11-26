@@ -30,13 +30,13 @@ sdownElement.addEventListener('click', (event) => {
     cardElement.classList.toggle('share__hidden')
 });
 
-icionstuffed.addEventListener('click', (event) => {
-   stuffed.classList.toogle('stuffed-hidden')
-});
+// icionstuffed.addEventListener('click', (event) => {
+//    stuffed.classList.toogle('stuffed-hidden')
+// });
 
-icionstuffed.addEventListener('click', (event) => {
-    stuffed.classList.toggle('rotate-stuffed')
-});
+// icionstuffed.addEventListener('click', (event) => {
+//     stuffed.classList.toggle('rotate-stuffed')
+// });
 
 
 
