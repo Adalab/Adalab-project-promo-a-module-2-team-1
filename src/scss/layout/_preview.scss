@@ -1,9 +1,11 @@
 .preview {
     padding: 5vh 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 240px;
+    justify-content:center;
+    align-content: center;
+    margin:auto;
     background-color: #dde9ed;
     font-family: $font-preview;
     font-size: 18px;
@@ -12,18 +14,33 @@
         order: 2;
         border-radius: 5px;
     }
-    /*
+    @media (min-width: 768px) {
+        width: 55%;
+    }
+
     &__reset {
         border: 2px solid white;
         background-color: transparent;
         border-radius: 20px;
-        padding: 5px 10px;
+        padding: 6px 12px;
         text-transform: uppercase;
         color: $font-color;
+        font-size: 12px;
+        margin-right: auto;
+        margin-bottom: 20px;
+        cursor: pointer;
+        transition: .5s ease;
+        .fa-regular {
+            margin-right: 5px;
+            color: $font-color;
+        }
+        &:hover {
+          background-color: white;;
+        }
     }
-    */
 
     .card {
+        height: fit-content;
         background-color: white;
         box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.35), 0 1px 3px 0 rgba(0, 0, 0, 0.35);
         &__header {
@@ -36,11 +53,13 @@
             margin-bottom: 5px;
             font-size: 18px;
             color: $terciary-color;
+            text-decoration: none;
         }
         &__job {
             font-size: 16px;
             font-weight: 500;
             color: $font-color;
+            text-decoration: none;
         }
         &__image {
             width: 240px;
@@ -60,6 +79,10 @@
             border: 3px solid $pantone1-3;
             border-radius: 50%;
             margin-right: 10px;
+            transition: .5s ease;
+            &:hover {
+              background-color: $pantone1-3;
+            }
         }
         &__link {
             text-decoration: none;
@@ -74,3 +97,54 @@
         }
     }
 }
+
+.palette1 {
+    .card__name {
+      color: $pantone1-1;
+    }
+    .card__header {
+      border-left: 4px solid $pantone1-2;
+    }
+    .card__item {
+      border: 3px solid $pantone1-3;
+      &:hover {
+        background-color: $pantone1-3;
+      }
+    }
+    .card__icon {
+      color: $pantone1-1;
+  }}
+  
+  .palette2 {
+      .card__name {
+        color: $pantone2-1;
+      }
+      .card__header {
+        border-left: 4px solid $pantone2-2;
+      }
+      .card__item {
+        border: 3px solid $pantone2-3;
+        &:hover {
+          background-color: $pantone2-3;
+        }
+      }
+      .card__icon {
+        color: $pantone2-1;
+    }}
+  
+    .palette3 {
+      .card__name {
+        color: $pantone3-1;
+      }
+      .card__header {
+        border-left: 4px solid $pantone3-2;
+      }
+      .card__item {
+        border: 3px solid $pantone3-3;
+        &:hover {
+          background-color: $pantone3-3;
+        }
+      }
+      .card__icon {
+        color: $pantone3-1;
+    }}

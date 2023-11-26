@@ -1,110 +1,106 @@
 .desing {
     font-family: $font-main;
-    margin: 27px 20px 0px 20px;
-    
+    padding: 27px 0px 0px 0px;
+    margin: 0px 20px 0px 20px;
     border-bottom: solid $color-border 1px;
-    &__header {
+    
+    .header-desing {
         display: flex;
         justify-content: space-between;
         margin-bottom: 10px;
-    }
-    &__title {
+        cursor: pointer;
+    
+        &__title {
         display: flex;
-    }
-    &__icon {
+        }
+        &__icon {
         color: $primary-color;
         font-size: 1.8rem;
         margin-right: 1rem;
-    }
-    &__h1 {
+        }
+        &__text1 {
         font-size: 1.8rem;
         color: $font-color;
         font-weight: 600;
-    }
-    &__down {
+        }
+        &__down {
         font-size: 1.8rem;
         color: $font-color;
-        cursor: pointer;
+        }
     }
-    
-    &__pantone {
+    .pantone-desing {
         font-family: $font-main;
         color: $font-color;
         font-size: 1.4rem;
-    
         display: flex;
         justify-content: space-between;
-    }
-    &__h2 {
-        margin-left: 19px;
-        margin-top: 12px;
-    }
-    &__options {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 30px;
-        margin-top: 21px; 
-    }
-    &__colors {
-        
-        display: flex;
-        justify-content: flex-end;
-        
-    }
-
-    &__colors2{
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-    &__radio {
-        margin-right: 10px;
-        cursor: pointer;
-    }
-   
-    &__box {
-        width: 30px;
-        height: 25px;
-    }
-}
     
-.desing__rotate {
+        &__text2 {
+            margin-left: 19px;
+            margin-top: 12px;
+        }
+        &__options {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 30px;
+            margin-top: 21px;
+            
+        }
+        .colors {
+            display: flex;
+            justify-content: flex-end;
+            cursor: pointer;
+
+            &__colors2{
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+            &__radio {
+                margin-right: 10px; 
+            }
+           
+            &__box {
+                width: 30px;
+                height: 25px;
+            }
+
+            .blue1 {
+                background-color: $pantone1-1;
+            }
+            .blue2 {
+                background-color: $pantone1-2;
+            }
+            .blue3 {
+                background-color: $pantone1-3;
+            }
+            .red1 {
+                background-color: $pantone2-1;
+            }
+            .red2 {
+                background-color: $pantone2-2;
+            }
+            .red3 {
+                background-color: $pantone2-3;
+            }
+            .mix1 {
+                background-color: $pantone3-1;
+            }
+            .mix2 {
+                background-color: $pantone3-2;
+            }
+            .mix3 {
+                background-color: $pantone3-3;
+            }
+        }  
+    }       
+
+
+// CLASES PARA JS //
+    
+    .desing__rotate {
     transform: rotate(180deg);  ///arrow js
-}
-.desing__hidden {
+    }
+    .desing__hidden {
     display: none;
-}
-    
-
-.icon_d {
-    size: 50px;
-    color: $primary-color; 
-   
-}
-
-.blue1 {
-    background-color: $pantone1-1;
-}
-.blue2 {
-    background-color: $pantone1-2;
-}
-.blue3 {
-    background-color: $pantone1-3;
-}
-.red1 {
-    background-color: $pantone2-1;
-}
-.red2 {
-    background-color: $pantone2-2;
-}
-.red3 {
-    background-color: $pantone2-3;
-}
-.mix1 {
-    background-color: $pantone3-1;
-}
-.mix2 {
-    background-color: $pantone3-2;
-}
-.mix3 {
-    background-color: $pantone3-3;
+    }
 }
