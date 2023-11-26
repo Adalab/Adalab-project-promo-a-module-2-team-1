@@ -1,63 +1,61 @@
 .share {
+  font-family: $font-main;
+  margin: 30px 20px 30px 20px;
+  padding-bottom: 7px;
+  border-bottom: solid $color-border 1px;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__title {
+    display: flex;
+  }
+  &__icon {
+    color: $primary-color;
+    font-size: 1.8rem;
+    margin-right: 1rem;
+  }
+  &__h1 {
+    font-size: 1.8rem;
+    color: $font-color;
+    font-weight: 600;
+  }
+  &__down {
+    font-size: 1.8rem;
+    color: $font-color;
+    cursor: pointer;
+  }
+  &__card {
+    display: flex;
+    justify-content: space-around;
+  }
+  &__button {
+    display: flex;
+    background-color: $primary-color;
+    color: $color-bg;
     font-family: $font-main;
-    margin: 30px 20px 30px 20px;
-    padding-bottom: 7px;
-    border-bottom: solid $color-border 1px;
-    &__header {
-        display: flex;
-        justify-content: space-between;
-    }
-    &__title {
-        display: flex;
-    }
-    &__icon {
-        color: $primary-color;
-        font-size: 1.8rem;
-        margin-right: 1rem;
-    }
-    &__h1 {
-        font-size: 1.8rem;
-        color: $font-color;
-        font-weight: 600;
-    }
-    &__down {
-        font-size: 1.8rem;
-        color: $font-color;
-        cursor: pointer;
-    }
-    &__card{
-        display: flex;
-        justify-content: space-around;
-    }
-    &__button {
-        display:flex;
-        background-color:$primary-color;
-        color: $color-bg;
-        font-family: $font-main;
-        font-size: 1.8rem;
-        font-weight: 600;
-        padding: 13px 18px 13px 18px;
-        border-radius: 12px;
-        border: none;
-        margin-top: 30px;
-        margin-bottom: 23px;
-        cursor: pointer;
-    }
-    &__create{
-        font-size: 22px;
-        background-color: $primary-color;
-        border: solid white 1;
-        
-    }
-    &__h3 {
-        margin-left: 9px;
-    }
+    font-size: 1.8rem;
+    font-weight: 600;
+    padding: 13px 18px 13px 18px;
+    border-radius: 12px;
+    border: none;
+    margin-top: 30px;
+    margin-bottom: 23px;
+    cursor: pointer;
+  }
+  &__create {
+    font-size: 22px;
+    background-color: $primary-color;
+    border: solid white 1;
+  }
+  &__h3 {
+    margin-left: 9px;
+  }
 
-    .share__rotate {
-        transform: rotate(180deg);  ///arrow js
-    }
-    .share__hidden {
-        display: none;
-    }
-
+  .share__rotate {
+    transform: rotate(180deg); ///arrow js
+  }
+  .share__hidden {
+    display: none;
+  }
 }
