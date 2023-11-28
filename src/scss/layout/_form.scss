@@ -1,0 +1,83 @@
+@mixin Text-Style-12 {
+  $font-main: "Open Sans", sans-serif;
+  font-size: 1.6rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2.8rem;
+  letter-spacing: normal;
+  color: $pantone1-1;
+}
+
+.stuffed {
+  display: flex;
+  justify-content: space-between;
+  padding: 27px 20px 0px 20px;
+
+  &__div-key {
+    display: flex;
+    width: 100vw;
+  }
+  &__icon-key {
+    color: #e17334;
+    font-size: 1.8rem;
+  }
+  &__text-key {
+    font-family: $font-main;
+    font-size: 1.8rem;
+    color: $font-color;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 1.5rem;
+    margin: 0 28.1rem 0 1.5rem;
+  }
+  &__icon-down {
+    font-size: 1.8rem;
+    color: #54585a;
+
+    cursor: pointer;
+  }
+
+  &__container-stuffed {
+    display: flex;
+    flex-direction: column;
+    @include Text-Style-12;
+    width: 30rem;
+    padding-top: 1.5rem;
+  }
+  &__div-add-img {
+    display: flex;
+    padding-bottom: 2rem;
+  }
+  &__add-img {
+    width: 14rem;
+    height: 3rem;
+    background-color: $primary-color;
+    border: none;
+    border-radius: 0.3rem;
+    $font-main: "Open Sans", sans-serif;
+    color: $color-bg;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+  }
+  &__check {
+    width: 3rem;
+    height: 3rem;
+    margin-left: 2rem;
+    border: solid 1px$pantone1-3;
+  }
+  input {
+    border: solid 1px $pantone1-3;
+    height: 3rem;
+    width: 100vw;
+    margin-bottom: 1.5rem;
+  }
+  &__text-add-img {
+    @include Text-Style-12;
+  }
+  .stuffed-hidden {
+    display: none;
+  }
+  .rotate-stuffed {
+    transform: rotate(180deg);
+  }
+}

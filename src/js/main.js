@@ -9,11 +9,6 @@ const pantoneElement = document.querySelector('.js_pantone');
 const sdownElement = document.querySelector('.js_sdown');
 const cardElement = document.querySelector('.js_card');
 
-const buttonCreateElement = document.querySelector('.js_button-create');
-const TwitterElement = document.querySelector('.js_twitter');
-
-
-
 
 ddownElement.addEventListener('click', (event) => {
     ddownElement.classList.toggle('desing__rotate')
@@ -52,6 +47,11 @@ const cardMobile = document.querySelector('.js-card-mobile');
 const cardEmail = document.querySelector('.js-card-email');
 const cardLinkedin = document.querySelector('.js-card-linkedin');
 const cardGithub = document.querySelector('.js-card-github');
+// icionstuffed.addEventListener('click', (event) => {
+//    stuffed.classList.toogle('stuffed-hidden')
+// });
+
+
 
 
 
