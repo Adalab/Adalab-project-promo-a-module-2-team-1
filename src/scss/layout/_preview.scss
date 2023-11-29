@@ -1,21 +1,19 @@
 .preview {
     padding: 5vh 0;
-    height: 100%;
     display: grid;
     grid-template-columns: 240px;
     justify-content:center;
     align-content: center;
-    margin:auto;
-    background-color: #dde9ed;
+    background-color: $preview-bg;
     font-family: $font-preview;
     font-size: 18px;
     @media (min-width: 768px) {
-        width: 45%;
+        width: 50%;
         order: 2;
         border-radius: 5px;
     }
-    @media (min-width: 768px) {
-        width: 55%;
+    @media (min-width: 1024px) {
+        width: 65%;
     }
 
     &__reset {

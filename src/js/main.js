@@ -1,8 +1,21 @@
 'use strict';
+// QUERYSELECTOR
 
-console.log('>> Ready :)');
+// Card
+const resetPreviewButton = document.querySelector('.js-preview-reset');
+const card = document.querySelector('.js-card');
+const cardBorder = document.querySelector('.js-card-border');
+const cardName = document.querySelector('.js-card-name');
+const cardJob = document.querySelector('.js-card-job');
+const cardImage = document.querySelector('.js-card-image');
+const cardItem = document.querySelector('.js-card-item');
+const cardIcon = document.querySelector('.js-card-icon');
+const cardMobile = document.querySelector('.js-card-mobile');
+const cardEmail = document.querySelector('.js-card-email');
+const cardLinkedin = document.querySelector('.js-card-linkedin');
+const cardGithub = document.querySelector('.js-card-github');
 
-
+// Arrow
 const ddownElement = document.querySelector('.js_ddown');
 const pantoneElement = document.querySelector('.js_pantone');
 
@@ -33,20 +46,6 @@ buttonCreateElement.addEventListener('click', (event) => {
 });
 
 
-
-// CARD
-const resetPreviewButton = document.querySelector('.js-preview-reset');
-const card = document.querySelector('.js-card');
-const cardBorder = document.querySelector('.js-card-border');
-const cardName = document.querySelector('.js-card-name');
-const cardJob = document.querySelector('.js-card-job');
-const cardImage = document.querySelector('.js-card-image');
-const cardItem = document.querySelector('.js-card-item');
-const cardIcon = document.querySelector('.js-card-icon');
-const cardMobile = document.querySelector('.js-card-mobile');
-const cardEmail = document.querySelector('.js-card-email');
-const cardLinkedin = document.querySelector('.js-card-linkedin');
-const cardGithub = document.querySelector('.js-card-github');
 // icionstuffed.addEventListener('click', (event) => {
 //    stuffed.classList.toogle('stuffed-hidden')
 // });
