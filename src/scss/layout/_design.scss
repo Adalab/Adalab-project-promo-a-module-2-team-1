@@ -1,5 +1,9 @@
 .design {
+
     @media (min-width: 768px) {
-        width: 55%;
+        width: 50%;
+    }
+    @media (min-width: 1200px) {
+        width: 35%;
     }
 }

@@ -1,5 +1,5 @@
 @mixin Text-Style-12 {
-  $font-main: "Open Sans", sans-serif;
+  font-family: $font-main;
   font-size: 1.6rem;
   font-weight: normal;
   font-stretch: normal;
@@ -10,17 +10,22 @@
 }
 
 .stuffed {
-  display: flex;
-  justify-content: space-between;
   padding: 27px 20px 0px 20px;
+  &__legend {
+    width: 100%;
+  }
+  &__div2 {
+    display: flex;
+  }
 
   &__div-key {
     display: flex;
-    width: 100vw;
+    justify-content: space-between;
   }
   &__icon-key {
     color: #e17334;
     font-size: 1.8rem;
+    margin-right: 1rem;
   }
   &__text-key {
     font-family: $font-main;
@@ -29,19 +34,18 @@
     font-weight: 600;
     text-transform: uppercase;
     line-height: 1.5rem;
-    margin: 0 28.1rem 0 1.5rem;
+    // margin: 0 28.1rem 0 1.5rem;
   }
   &__icon-down {
     font-size: 1.8rem;
     color: #54585a;
-
     cursor: pointer;
   }
 
   &__container-stuffed {
     display: flex;
     flex-direction: column;
-    @include Text-Style-12;
+
     width: 30rem;
     padding-top: 1.5rem;
   }
@@ -63,19 +67,21 @@
     width: 3rem;
     height: 3rem;
     margin-left: 2rem;
-    border: solid 1px$pantone1-3;
+    border: solid 1px $pantone1-3;
+  }
+  label {
+    @include Text-Style-12;
   }
   input {
     border: solid 1px $pantone1-3;
     height: 3rem;
-    width: 100vw;
     margin-bottom: 1.5rem;
   }
   &__text-add-img {
     @include Text-Style-12;
   }
   .stuffed-hidden {
-    display: none;
+    // display: none;
   }
   .rotate-stuffed {
     transform: rotate(180deg);
