@@ -1,11 +1,12 @@
 .share-container {
-  padding: 27px 20px 0px 20px;
+  
 }
 
 .share {
   font-family: $font-main;
   margin: 30px 20px 30px 20px;
   border-bottom: solid $color-border 1px;
+  padding: 0px 20px 0px 20px;
 
   @media (min-width:768px){
     margin: 30px 0px 30px 0px;

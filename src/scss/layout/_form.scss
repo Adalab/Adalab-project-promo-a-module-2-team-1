@@ -10,7 +10,11 @@
 }
 
 .stuffed {
-  padding: 27px 20px 0px 20px;
+  padding: 27px 0px 0px 0px;
+  
+  margin: 0px 20px 0px 20px;
+  border-bottom: solid $color-border 1px;
+
   &__legend {
     width: 100%;
   }
@@ -21,6 +25,7 @@
   &__div-key {
     display: flex;
     justify-content: space-between;
+    padding-bottom: 7px;
   }
   &__icon-key {
     color: #e17334;
@@ -79,11 +84,12 @@
   }
   &__text-add-img {
     @include Text-Style-12;
-  }
-  .stuffed-hidden {
-    // display: none;
-  }
-  .rotate-stuffed {
-    transform: rotate(180deg);
-  }
+  }  
+}
+
+.stuffed-hidden {
+  display: none;
+}
+.rotate-stuffed {
+  transform: rotate(180deg);
 }

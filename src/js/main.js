@@ -34,29 +34,38 @@ const cardLinkedin = document.querySelector('.js-card-linkedin');
 const cardGithub = document.querySelector('.js-card-github');
 
 // Arrow
-const ddownElement = document.querySelector('.js_ddown');
+const dheaderElement = document.querySelector('.js_dheader');
 const pantoneElement = document.querySelector('.js_pantone');
+const dcolorArrow = document.querySelector('.js_darrow')
 
-const sdownElement = document.querySelector('.js_sdown');
+const fheaderElement = document.querySelector('.js_fheader');
+const formElement = document.querySelector('.js_formlist');
+const fArrow = document.querySelector('.js_farrow')
+
+const sheaderElement = document.querySelector('.js_sheader');
 const cardElement = document.querySelector('.js_card');
+const sArrow = document.querySelector('.js_sarrow')
 
 // EVENTOS
 
 //Flechas
-ddownElement.addEventListener('click', (event) => {
-    ddownElement.classList.toggle('desing__rotate')
-});
-ddownElement.addEventListener('click', (event) => {
+dheaderElement.addEventListener('click', (event) => {
+    dcolorArrow.classList.toggle('desing__rotate')
     pantoneElement.classList.toggle('desing__hidden')
 });
 
-sdownElement.addEventListener('click', (event) => {
-    sdownElement.classList.toggle('share__rotate')
+
+fheaderElement.addEventListener('click', (event) => {
+    fArrow.classList.toggle('rotate-stuffed')
+    formElement.classList.toggle('stuffed-hidden')
 });
 
-sdownElement.addEventListener('click', (event) => {
+sheaderElement.addEventListener('click', (event) => {
+    sArrow.classList.toggle('share__rotate')
     cardElement.classList.toggle('share__hidden')
 });
+
+
 
 // buttonCreateElement.addEventListener('click', (event) => {
 //     TwitterElement.classList.toggle('share__hidden')
