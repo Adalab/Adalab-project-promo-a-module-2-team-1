@@ -50,19 +50,42 @@ const sArrow = document.querySelector('.js_sarrow')
 
 //Flechas
 dheaderElement.addEventListener('click', (event) => {
-    dcolorArrow.classList.toggle('desing__rotate')
-    pantoneElement.classList.toggle('desing__hidden')
+    //dcolorArrow.classList.toggle('desing__rotate')
+
+    formElement.classList.add('stuffed-hidden')
+    cardElement.classList.add('share__hidden')
+    pantoneElement.classList.remove('desing__hidden')
+
+    fArrow.classList.remove('rotate-stuffed')
+    sArrow.classList.remove('rotate-stuffed')
+    dcolorArrow.classList.add ('desing__rotate')
+
 });
 
 
 fheaderElement.addEventListener('click', (event) => {
-    fArrow.classList.toggle('rotate-stuffed')
-    formElement.classList.toggle('stuffed-hidden')
+    
+    pantoneElement.classList.add('desing__hidden')
+    cardElement.classList.add('share__hidden')
+    formElement.classList.remove('stuffed-hidden')
+
+    sArrow.classList.remove('rotate-stuffed')
+    dcolorArrow.classList.remove ('desing__rotate')
+    fArrow.classList.add('rotate-stuffed')
+
+
 });
 
 sheaderElement.addEventListener('click', (event) => {
-    sArrow.classList.toggle('share__rotate')
-    cardElement.classList.toggle('share__hidden')
+    
+    pantoneElement.classList.add('desing__hidden')
+    formElement.classList.add('stuffed-hidden')
+    cardElement.classList.remove('share__hidden')
+
+    dcolorArrow.classList.remove ('desing__rotate')
+    fArrow.classList.remove('rotate-stuffed')
+    sArrow.classList.add('share__rotate')
+
 });
 
 
