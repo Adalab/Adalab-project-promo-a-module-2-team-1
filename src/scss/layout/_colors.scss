@@ -3,6 +3,11 @@
     padding: 27px 0px 0px 0px;
     margin: 0px 20px 0px 20px;
     border-bottom: solid $color-border 1px;
+
+    @media (min-width:768px){
+        margin: 0px 0px 0px 0px;
+        padding: 7px 0px 0px 0px;
+    }
     
     .header-desing {
         display: flex;
