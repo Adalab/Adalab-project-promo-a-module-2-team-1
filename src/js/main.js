@@ -75,27 +75,37 @@ sheaderElement.addEventListener('click', (event) => {
 // Tarjeta Preview
 inputName.addEventListener('input', (event) => {
     card.name = event.currentTarget.value;
-    cardName.innerHTML = card.name;
+    if (card.name === "" ) 
+    {cardName.innerHTML = 'Nombre Apellido'}
+    else {cardName.innerHTML = card.name;}
+   
 });
 inputJob.addEventListener('input', (event) => {
     card.job = event.currentTarget.value;
-    cardJob.innerHTML = card.job;
+    if (card.job === "" ) 
+    {cardJob.innerHTML = 'Front-end developer'}
+    else {cardJob.innerHTML = card.job;}
+    
 });
 inputEmail.addEventListener('input', (event) => {
     card.email = event.currentTarget.value;
     cardEmail.href = 'mailto:' + card.email;
+    
 });
 inputPhone.addEventListener('input', (event) => {
     card.phone = event.currentTarget.value;
-    cardMobile.href = 'tel:' + card.phone;
+    cardMobile.href = 'tel:' + card.phone;;
+    
 });
 inputLinkedin.addEventListener('input', (event) => {
     card.linkedin = event.currentTarget.value;
     cardLinkedin.href = 'https://' + card.linkedin;
+    
 });
 inputGithub.addEventListener('input', (event) => {
-    card.linkedin = event.currentTarget.value;
+    card.github = event.currentTarget.value;
     cardGithub.href = 'https://' + card.github;
+    
 });
 
 resetPreviewButton.addEventListener('click', (event) => {
@@ -108,4 +118,12 @@ resetPreviewButton.addEventListener('click', (event) => {
     form.reset()
 });
 
+// function upDatePreview () {
+//     cardName.innerHTML = card.name;
+//     cardJob.innerHTML = card.job;
+//     cardEmail.href = 'mailto:' + card.email;
+//     cardMobile.href = 'tel:' + card.phone;
+//     cardLinkedin.href = 'https://' + card.linkedin;
+//     cardGithub.href = 'https://' + card.github;
+// }
 

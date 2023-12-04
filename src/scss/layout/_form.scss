@@ -11,7 +11,7 @@
 
 .stuffed {
   padding: 27px 0px 0px 0px;
-  
+
   margin: 0px 20px 0px 20px;
   border-bottom: solid $color-border 1px;
 
@@ -78,13 +78,14 @@
     @include Text-Style-12;
   }
   input {
+    padding-left: 0.5rem;
     border: solid 1px $pantone1-3;
     height: 3rem;
     margin-bottom: 1.5rem;
   }
   &__text-add-img {
     @include Text-Style-12;
-  }  
+  }
 }
 
 .stuffed-hidden {
