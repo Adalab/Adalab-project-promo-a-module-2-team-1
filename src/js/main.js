@@ -11,7 +11,7 @@ const card = {
     github:''
 };
 // QUERYSELECTOR
-// FORM
+// Form
 const form = document.querySelector('.js_form');
 const inputName = document.querySelector('.js_name');
 const inputJob = document.querySelector('.js_job');
@@ -41,6 +41,8 @@ const sdownElement = document.querySelector('.js_sdown');
 const cardElement = document.querySelector('.js_card');
 
 // EVENTOS
+
+//Flechas
 ddownElement.addEventListener('click', (event) => {
     ddownElement.classList.toggle('desing__rotate')
 });
@@ -60,6 +62,8 @@ sdownElement.addEventListener('click', (event) => {
 //     TwitterElement.classList.toggle('share__hidden')
 // });
 
+
+// Tarjeta Preview
 inputName.addEventListener('input', (event) => {
     card.name = event.currentTarget.value;
     cardName.innerHTML = card.name;
