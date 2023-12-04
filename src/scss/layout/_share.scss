@@ -9,31 +9,34 @@
 
   @media (min-width:768px){
     margin: 30px 0px 30px 0px;
-}
+  }
   
-  &__header {
+  .header-share {
     display: flex;
     justify-content: space-between;
     padding-bottom: 7px;
-  }
-  &__title {
-    display: flex;
-  }
-  &__icon {
-    color: $primary-color;
-    font-size: 1.8rem;
-    margin-right: 1rem;
-  }
-  &__h1 {
-    font-size: 1.8rem;
-    color: $font-color;
-    font-weight: 600;
-  }
-  &__down {
-    font-size: 1.8rem;
-    color: $font-color;
     cursor: pointer;
+  
+    &__title {
+    display: flex;
+    }
+    &__icon {
+      color: $primary-color;
+      font-size: 1.8rem;
+      margin-right: 1rem;
+    }
+    &__text1 {
+      font-size: 1.8rem;
+      color: $font-color;
+      font-weight: 600;
+    }
+    &__down {
+      font-size: 1.8rem;
+      color: $font-color;
+      cursor: pointer;
+    }
   }
+  
   &__card {
     display: flex;
     justify-content: space-around;
