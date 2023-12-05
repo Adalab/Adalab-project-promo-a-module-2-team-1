@@ -39,61 +39,55 @@
     font-size: 1.4rem;
     display: flex;
     justify-content: space-between;
-
     &__text2 {
-        margin-left: 19px;
-        margin-top: 12px;
+      margin-left: 19px;
+      margin-top: 12px;
     }
     &__options {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 30px;
-        margin-top: 21px;
-        
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 30px;
+      margin-top: 21px;
     }
     .colors {
       display: flex;
       justify-content: flex-end;
       cursor: pointer;
-
       &__colors2{
-          margin-top: 20px;
-          margin-bottom: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
       }
       &__radio {
-          margin-right: 10px;
-          width: 17px;
-          
+        margin-right: 10px;
+        width: 17px;
       }
-      
       &__box {
-          width: 30px;
-          height: 25px;
+        width: 30px;
+        height: 25px;
       }
-
       .blue1 {
-          background-color: $pantone1-1;
+        background-color: $pantone1-1;
       }
       .blue2 {
-          background-color: $pantone1-2;
+        background-color: $pantone1-2;
       }
       .blue3 {
-          background-color: $pantone1-3;
+        background-color: $pantone1-3;
       }
       .red1 {
-          background-color: $pantone2-1;
+        background-color: $pantone2-1;
       }
       .red2 {
-          background-color: $pantone2-2;
+        background-color: $pantone2-2;
       }
       .red3 {
-          background-color: $pantone2-3;
+        background-color: $pantone2-3;
       }
       .mix1 {
-          background-color: $pantone3-1;
+        background-color: $pantone3-1;
       }
       .mix2 {
-          background-color: $pantone3-2;
+        background-color: $pantone3-2;
       }
       .mix3 {
           background-color: $pantone3-3;
@@ -102,9 +96,9 @@
   }       
   // CLASES PARA JS //
   .desing__rotate {
-  transform: rotate(180deg);  ///arrow js
+    transform: rotate(180deg);  ///arrow js
   }
   .desing__hidden {
-  display: none;
+    display: none;
   }
 }
