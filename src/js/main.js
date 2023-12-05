@@ -69,7 +69,7 @@ fheaderElement.addEventListener('click', (event) => {
     cardElement.classList.add('share__hidden')
     formElement.classList.remove('stuffed-hidden')
 
-    sArrow.classList.remove('rotate-stuffed')
+    sArrow.classList.remove('share__rotate')
     dcolorArrow.classList.remove ('desing__rotate')
     fArrow.classList.add('rotate-stuffed')
 
