@@ -1,38 +1,40 @@
-<section class="share">
+<form>
+    <fieldset class="share">
 
-    <div class="header-share js_sheader">
+        <div class="header-share js_sheader">
 
-        <div class="header-share__title">
-            <i class="fa-solid fa-share-nodes fa-2x header-share__icon"></i>
-            <h1 class="header-share__text1">COMPARTE</h1>
+            <legend class="header-share__title">
+                <i class="fa-solid fa-share-nodes fa-2x header-share__icon"></i>
+                <h1 class="header-share__text1">COMPARTE</h1>
+            </legend>
+
+            <i class="fa-solid fa-chevron-down header-share__down js_sarrow"></i>
         </div>
 
-        <i class="fa-solid fa-chevron-down header-share__down js_sarrow"></i>
-    </div>
+        <div class="card-share share__hidden js_card">
 
-    <div class="share__card share__hidden js_card">
+            <button class="card-share__button js_button-create">
+                <i class="fa-solid fa-address-card card-share__create"></i>
+                <h3 class="card-share__title">CREAR TARJETA</h3>
+            </button>
+        
+        </div>
 
-        <button class="share__button js_button-create">
-            <i class="fa-solid fa-address-card share__create"></i>
-            <h3 class="share__h3">CREAR TARJETA</h3>
-        </button>
-    </div>
+        <div class="twitter-share share__hidden js_twitter">
 
-    <div class="share__twitter share__hidden js_twitter">
+            <p class="twitter-share__text1">La tarjeta ha sido creada:</p>
 
-        <p class="share__p">La tarjeta ha sido creada:</p>
+            <a href=" https://awesome-profile-card.com?id=A456DF0001" class="twitter-share__link">
+                https://awesome-profile-card.com?id=A456DF0001
+            </a>
 
-        <a href=" https://awesome-profile-card.com?id=A456DF0001" class="share__a">
-            https://awesome-profile-card.com?id=A456DF0001</a>
+            <button class="twitter-share__botton">
 
-        <button class="share__button-twitter">
-            <i class="fa-brands fa-twitter share__logo-twitter"></i>
+                <i class="fa-brands fa-twitter twitter-share__logo"></i>
 
-            <h3 class="share__h2">Compartir en twitter</h3>
-        </button>
-    </div>
-
-
-
-
-</section>
+                <h3 class="twitter-share__textlogo">Compartir en twitter</h3>
+            </button>
+        </div>
+        
+    </fieldset>
+</form>

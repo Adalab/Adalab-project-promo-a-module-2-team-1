@@ -10,13 +10,15 @@
 }
 
 .stuffed {
-  padding: 27px 0px 0px 0px;
-
+  padding: 10px 0px 0px 0px;
   margin: 0px 20px 0px 20px;
   border-bottom: solid $color-border 1px;
-
+  @media (min-width:768px){
+    margin: 0px 30px 0px 30px;
+  }
   &__legend {
     width: 100%;
+    cursor: pointer;
   }
   &__div2 {
     display: flex;
@@ -44,14 +46,10 @@
   &__icon-down {
     font-size: 1.8rem;
     color: #54585a;
-    cursor: pointer;
   }
-
   &__container-stuffed {
     display: flex;
     flex-direction: column;
-
-    width: 30rem;
     padding-top: 1.5rem;
   }
   &__div-add-img {
@@ -81,7 +79,7 @@
     padding-left: 0.5rem;
     border: solid 1px $pantone1-3;
     height: 3rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 3rem;
   }
   &__text-add-img {
     @include Text-Style-12;
