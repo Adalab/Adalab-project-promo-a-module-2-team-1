@@ -69,7 +69,7 @@ fheaderElement.addEventListener('click', (event) => {
     cardElement.classList.add('share__hidden')
     formElement.classList.remove('stuffed-hidden')
 
-    sArrow.classList.remove('rotate-stuffed')
+    sArrow.classList.remove('share__rotate')
     dcolorArrow.classList.remove ('desing__rotate')
     fArrow.classList.add('rotate-stuffed')
 
@@ -98,50 +98,77 @@ sheaderElement.addEventListener('click', (event) => {
 // Tarjeta Preview
 inputName.addEventListener('input', (event) => {
     card.name = event.currentTarget.value;
-    if (card.name === "" ) 
-    {cardName.innerHTML = 'Nombre Apellido'}
-    else {cardName.innerHTML = card.name;}
+    upDatePreview();
    
 });
 inputJob.addEventListener('input', (event) => {
     card.job = event.currentTarget.value;
-    if (card.job === "" ) 
-    {cardJob.innerHTML = 'Front-end developer'}
-    else {cardJob.innerHTML = card.job;}
+    upDatePreview();
+    
     
 });
 inputEmail.addEventListener('input', (event) => {
     card.email = event.currentTarget.value;
-    cardEmail.href = 'mailto:' + card.email;
+    upDatePreview();
     
 });
 inputPhone.addEventListener('input', (event) => {
     card.phone = event.currentTarget.value;
-    cardMobile.href = 'tel:' + card.phone;;
-    
+    upDatePreview();    
 });
 inputLinkedin.addEventListener('input', (event) => {
     card.linkedin = event.currentTarget.value;
-    cardLinkedin.href = 'https://' + card.linkedin;
-    
+    upDatePreview();    
 });
 inputGithub.addEventListener('input', (event) => {
     card.github = event.currentTarget.value;
-    cardGithub.href = 'https://' + card.github;
-    
+    upDatePreview();    
 });
 
 resetPreviewButton.addEventListener('click', (event) => {
-    upDatePreview();
+    cardName.innerHTML = 'Nombre Apellido'
+    cardJob.innerHTML = 'Front-end developer'
+    cardMobile.href = ''
+    cardEmail.href = ''
+    cardLinkedin.href = ''
+    cardGithub.href = ''
     form.reset()
 });
 
- function upDatePreview () {
-    cardName.innerHTML = card.name;
-   cardJob.innerHTML = card.job;
-   cardEmail.href = 'mailto:' + card.email;
-    cardMobile.href = 'tel:' + card.phone;    cardLinkedin.href = 'https://' + card.linkedin;
+function upDatePreview () {
+     if (card.name === "" ) 
+    {cardName.innerHTML = 'Nombre Apellido'}
+    else {cardName.innerHTML = card.name;}
+    
+    if (card.job === "" ) 
+    {cardJob.innerHTML = 'Front-end developer'}
+    else {cardJob.innerHTML = card.job;}
+    cardEmail.href = 'mailto:' + card.email;
+    cardMobile.href = 'tel:' + card.phone;
+    cardLinkedin.href = 'https://' + card.linkedin;
     cardGithub.href = 'https://' + card.github;
-}
+ }
+'use strict';
 
+ const palette1 = document.querySelector(".js_palette1")
+ const palette2 = document.querySelector(".js_palette2")
+ const palette3 = document.querySelector(".js_palette3")
+ const previewCard = document.querySelector(".js__previewCard")
 
+palette1.addEventListener('input',(event) => {
+    card.palette = 1;
+    previewCard.classList.remove("palette1","palette2","palette3")
+    previewCard.classList.add("palette1")
+})
+
+palette2.addEventListener('input',(event) => {
+    card.palette = 2;
+    previewCard.classList.remove("palette1","palette2","palette3")
+    previewCard.classList.add("palette2")
+})
+
+palette3.addEventListener('input',(event) => {
+    card.palette = 3;
+    previewCard.classList.remove("palette1","palette2","palette3")
+    previewCard.classList.add("palette3")
+})

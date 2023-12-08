@@ -1,115 +1,104 @@
-.design_container {
-    padding: 27px 20px 0px 20px;
-}
-
 .desing {
+  font-family: $font-main;
+  padding: 27px 0px 0px 0px;
+  margin: 0px 20px 0px 20px;
+  border-bottom: solid $color-border 1px;
+  // TABLET AND DESKTOP //
+  @media (min-width:768px){
+    margin: 0px 30px 0px 30px;
+    padding: 0px 0px 0px 0px;
+  }
+  // LEGEND //
+  .header-desing {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 7px;
+    cursor: pointer;
+    &__title {
+    display: flex;
+    }
+    &__icon {
+    color: $primary-color;
+    font-size: 1.8rem;
+    margin-right: 10px;
+    }
+    &__text1 {
+    font-size: 1.8rem;
+    color: $font-color;
+    font-weight: 600;
+    }
+    &__down {
+    font-size: 1.8rem;
+    color: $font-color;
+    }
+  }
+  // HIDDEN 1 //
+  .pantone-desing {
     font-family: $font-main;
-    // padding: 27px 0px 0px 0px;
-    margin: 0px 20px 0px 20px;
-    border-bottom: solid $color-border 1px;
-
-    @media (min-width:768px){
-        margin: 0px 0px 0px 0px;
-        padding: 7px 0px 0px 0px;
+    color: $font-color;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: space-between;
+    &__text2 {
+      margin-left: 19px;
+      margin-top: 12px;
     }
-    
-    .header-desing {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 10px;
-        cursor: pointer;
-    
-        &__title {
-        display: flex;
-        }
-        &__icon {
-        color: $primary-color;
-        font-size: 1.8rem;
-        margin-right: 1rem;
-        }
-        &__text1 {
-        font-size: 1.8rem;
-        color: $font-color;
-        font-weight: 600;
-        }
-        &__down {
-        font-size: 1.8rem;
-        color: $font-color;
-        }
+    &__options {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 30px;
+      margin-top: 21px;
     }
-    .pantone-desing {
-        font-family: $font-main;
-        color: $font-color;
-        font-size: 1.4rem;
-        display: flex;
-        justify-content: space-between;
-    
-        &__text2 {
-            margin-left: 19px;
-            margin-top: 12px;
-        }
-        &__options {
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 30px;
-            margin-top: 21px;
-            
-        }
-        .colors {
-            display: flex;
-            justify-content: flex-end;
-            cursor: pointer;
-
-            &__colors2{
-                margin-top: 20px;
-                margin-bottom: 20px;
-            }
-            &__radio {
-                margin-right: 10px; 
-            }
-           
-            &__box {
-                width: 30px;
-                height: 25px;
-            }
-
-            .blue1 {
-                background-color: $pantone1-1;
-            }
-            .blue2 {
-                background-color: $pantone1-2;
-            }
-            .blue3 {
-                background-color: $pantone1-3;
-            }
-            .red1 {
-                background-color: $pantone2-1;
-            }
-            .red2 {
-                background-color: $pantone2-2;
-            }
-            .red3 {
-                background-color: $pantone2-3;
-            }
-            .mix1 {
-                background-color: $pantone3-1;
-            }
-            .mix2 {
-                background-color: $pantone3-2;
-            }
-            .mix3 {
-                background-color: $pantone3-3;
-            }
-        }  
-    }       
-
-
-// CLASES PARA JS //
-    
-    .desing__rotate {
+    .colors {
+      display: flex;
+      justify-content: flex-end;
+      cursor: pointer;
+      &__colors2{
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      &__radio {
+        margin-right: 10px;
+        width: 17px;
+      }
+      &__box {
+        width: 30px;
+        height: 25px;
+      }
+      .blue1 {
+        background-color: $pantone1-1;
+      }
+      .blue2 {
+        background-color: $pantone1-2;
+      }
+      .blue3 {
+        background-color: $pantone1-3;
+      }
+      .red1 {
+        background-color: $pantone2-1;
+      }
+      .red2 {
+        background-color: $pantone2-2;
+      }
+      .red3 {
+        background-color: $pantone2-3;
+      }
+      .mix1 {
+        background-color: $pantone3-1;
+      }
+      .mix2 {
+        background-color: $pantone3-2;
+      }
+      .mix3 {
+          background-color: $pantone3-3;
+      }
+    }  
+  }       
+  // CLASES PARA JS //
+  .desing__rotate {
     transform: rotate(180deg);  ///arrow js
-    }
-    .desing__hidden {
+  }
+  .desing__hidden {
     display: none;
-    }
+  }
 }
