@@ -148,4 +148,27 @@ function upDatePreview () {
     cardLinkedin.href = 'https://' + card.linkedin;
     cardGithub.href = 'https://' + card.github;
  }
+'use strict';
 
+ const palette1 = document.querySelector(".js_palette1")
+ const palette2 = document.querySelector(".js_palette2")
+ const palette3 = document.querySelector(".js_palette3")
+ const previewCard = document.querySelector(".js__previewCard")
+
+palette1.addEventListener('input',(event) => {
+    card.palette = 1;
+    previewCard.classList.remove("palette1","palette2","palette3")
+    previewCard.classList.add("palette1")
+})
+
+palette2.addEventListener('input',(event) => {
+    card.palette = 2;
+    previewCard.classList.remove("palette1","palette2","palette3")
+    previewCard.classList.add("palette2")
+})
+
+palette3.addEventListener('input',(event) => {
+    card.palette = 3;
+    previewCard.classList.remove("palette1","palette2","palette3")
+    previewCard.classList.add("palette3")
+})
