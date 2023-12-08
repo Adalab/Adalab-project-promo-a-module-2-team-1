@@ -132,21 +132,16 @@ inputGithub.addEventListener('input', (event) => {
 });
 
 resetPreviewButton.addEventListener('click', (event) => {
-    cardName.innerHTML = 'Nombre Apellido'
-    cardJob.innerHTML = 'Front-end developer'
-    cardMobile.href = ''
-    cardEmail.href = ''
-    cardLinkedin.href = ''
-    cardGithub.href = ''
+    upDatePreview();
     form.reset()
 });
 
-// function upDatePreview () {
-//     cardName.innerHTML = card.name;
-//     cardJob.innerHTML = card.job;
-//     cardEmail.href = 'mailto:' + card.email;
-//     cardMobile.href = 'tel:' + card.phone;
-//     cardLinkedin.href = 'https://' + card.linkedin;
-//     cardGithub.href = 'https://' + card.github;
-// }
+ function upDatePreview () {
+    cardName.innerHTML = card.name;
+   cardJob.innerHTML = card.job;
+   cardEmail.href = 'mailto:' + card.email;
+    cardMobile.href = 'tel:' + card.phone;    cardLinkedin.href = 'https://' + card.linkedin;
+    cardGithub.href = 'https://' + card.github;
+}
+
 
