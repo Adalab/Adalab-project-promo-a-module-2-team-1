@@ -172,3 +172,5 @@ palette3.addEventListener('input',(event) => {
     previewCard.classList.remove("palette1","palette2","palette3")
     previewCard.classList.add("palette3")
 })
+
+palette1.checked = true
