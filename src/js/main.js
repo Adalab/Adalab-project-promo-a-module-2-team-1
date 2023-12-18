@@ -1,4 +1,7 @@
 'use strict';
+
+import './get-avatar.js'
+
 // OBJETOS
 const card = {
     palette: '',

@@ -14,23 +14,24 @@
       </legend>
 
       <div class="stuffed__container-stuffed js_cont-stuffed stuffed-hidden js_formlist">
-        <label for="name">Nombre completo</label>
+        <label class="stuffed__label" for="name">Nombre completo</label>
         <input class="js_name" type="text" name="name" id="name" placeholder="Ej: Sally Jill" requiered />
-        <label for="Position">Puesto</label>
+        <label class="stuffed__label" for="Position">Puesto</label>
         <input class="js_job" type="text" name="Position" id="Position" placeholder="Ej: Front-end unicorn" requiered />
         <h1 class="stuffed__text-add-img">Imagen de perfil</h1>
         <div class="stuffed__div-add-img">
-          <button class="stuffed__add-img">Añadir imagen</button>
-          <div class="stuffed__check"></div>
+          <label class="stuffed__add-img" for="photo" id="label">Añadir imagen</label>
+          <input type="file" id="photo" class="hidden js__profile-upload-btn">
+          <span class="stuffed__check js__profile-preview"></span>
         </div>
-        <label for="email">Email</label>
+        <label class="stuffed__label" for="email">Email</label>
         <input class="js_email" type="email" name="emial" id="email" placeholder="Ej: sally.hill@gmail.com" requiered />
-        <label for="tlf">Telefono</label>
+        <label class="stuffed__label" for="tlf">Telefono</label>
         <input class="js_tlf" type="tel" name="tlf" id="tlf" placeholder="Ej: 555-55-55-55" />
-        <label for="Name">Linkedin</label>
+        <label class="stuffed__label" for="Name">Linkedin</label>
         <input class="js_linkedin" type="email" name="Linkedin" id="Linkedin"
           placeholder="Ej: linkedin.com/in/sally-hill" requiered />
-        <label for="Name">Github</label>
+        <label class="stuffed__label" for="Name">Github</label>
         <input class="js_github" type="email" name="Github" id="Github" placeholder="Ej: github.com/sally-hill"
           requiered />
       </div>

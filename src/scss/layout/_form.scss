@@ -56,23 +56,15 @@
     display: flex;
     padding-bottom: 2rem;
   }
-  &__add-img {
-    width: 14rem;
-    height: 3rem;
-    background-color: $primary-color;
-    border: none;
-    border-radius: 0.3rem;
-    $font-main: "Open Sans", sans-serif;
-    color: $color-bg;
-    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
-  }
   &__check {
     width: 3rem;
     height: 3rem;
     margin-left: 2rem;
     border: solid 1px $pantone1-3;
+    background-size: cover;
+    background-position: center;
   }
-  label {
+  &__label {
     @include Text-Style-12;
   }
   input {
@@ -84,6 +76,19 @@
   &__text-add-img {
     @include Text-Style-12;
   }
+  &__add-img {
+    width: 14rem;
+    height: 3rem;
+    background-color: $primary-color;
+    border: none;
+    border-radius: 0.3rem;
+    font-family: $font-main;
+    font-size: 1.4rem;
+    text-align: center;
+    color: $color-bg;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+    padding: 7px 0px;
+  }
 }
 
 .stuffed-hidden {
@@ -91,4 +96,8 @@
 }
 .rotate-stuffed {
   transform: rotate(180deg);
+}
+
+.hidden {
+  display:none;
 }
