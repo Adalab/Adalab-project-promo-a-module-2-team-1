@@ -1,6 +1,5 @@
 'use strict';
 
-import './get-avatar.js'
 
 // OBJETOS
 const card = {
@@ -177,3 +176,6 @@ palette3.addEventListener('input',(event) => {
 })
 
 palette1.checked = true
+
+import './get-avatar.js'
+import './localStorage.js'
