@@ -21,10 +21,10 @@ if( cardFromLS !== null ) {
   cardJob.innerHTML = cardFromLSasObject.job;
   profileImage.style.backgroundImage = `url(${cardFromLSasObject.photo})`;
   profilePreview.style.backgroundImage = `url(${cardFromLSasObject.photo})`;
-  cardMobile.href = cardFromLSasObject.phone;
-  cardEmail.href = cardFromLSasObject.email;
-  cardLinkedin.href = cardFromLSasObject.linkedin;
-  cardGithub.href = cardFromLSasObject.github;
+  cardMobile.href = 'tel:' + cardFromLSasObject.phone;
+  cardEmail.href = 'mailto:' + cardFromLSasObject.email;
+  cardLinkedin.href = 'https://' + cardFromLSasObject.linkedin;
+  cardGithub.href = 'https://' + cardFromLSasObject.github;
 
   // render input data
   inputName.value = cardFromLSasObject.name;
