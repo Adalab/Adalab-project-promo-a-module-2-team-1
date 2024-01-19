@@ -1,18 +1,22 @@
 'use strict';
 
-
 // OBJETOS
 const card = {
     palette: '',
     name: '',
     job: '',
-    photo:'',
-    email:'',
-    phone:'',
-    linkedin:'',
-    github:''
+    photo: '',
+    email: '',
+    phone: '',
+    linkedin: '',
+    github: ''
 };
+
 // QUERYSELECTOR
+//Palettes
+const palette1 = document.querySelector(".js_palette1")
+const palette2 = document.querySelector(".js_palette2")
+const palette3 = document.querySelector(".js_palette3")
 // Form
 const form = document.querySelector('.js_form');
 const inputName = document.querySelector('.js_name');
@@ -24,16 +28,13 @@ const inputGithub = document.querySelector('.js_github');
 
 // Card
 const resetPreviewButton = document.querySelector('.js-preview-reset');
-const cardBorder = document.querySelector('.js-card-border');
 const cardName = document.querySelector('.js-card-name');
 const cardJob = document.querySelector('.js-card-job');
-const cardImage = document.querySelector('.js-card-image');
-const cardItem = document.querySelector('.js-card-item');
-const cardIcon = document.querySelector('.js-card-icon');
 const cardMobile = document.querySelector('.js-card-mobile');
 const cardEmail = document.querySelector('.js-card-email');
 const cardLinkedin = document.querySelector('.js-card-linkedin');
 const cardGithub = document.querySelector('.js-card-github');
+const previewCard = document.querySelector(".js__previewCard")
 
 // Arrow
 const dheaderElement = document.querySelector('.js_dheader');
@@ -74,8 +75,6 @@ fheaderElement.addEventListener('click', (event) => {
     sArrow.classList.remove('share__rotate')
     dcolorArrow.classList.remove ('desing__rotate')
     fArrow.classList.add('rotate-stuffed')
-
-
 });
 
 sheaderElement.addEventListener('click', (event) => {
@@ -101,27 +100,29 @@ sheaderElement.addEventListener('click', (event) => {
 inputName.addEventListener('input', (event) => {
     card.name = event.currentTarget.value;
     upDatePreview();
-   
 });
+
 inputJob.addEventListener('input', (event) => {
     card.job = event.currentTarget.value;
     upDatePreview();
-    
-    
 });
+
 inputEmail.addEventListener('input', (event) => {
     card.email = event.currentTarget.value;
     upDatePreview();
     
 });
+
 inputPhone.addEventListener('input', (event) => {
     card.phone = event.currentTarget.value;
     upDatePreview();    
 });
+
 inputLinkedin.addEventListener('input', (event) => {
     card.linkedin = event.currentTarget.value;
     upDatePreview();    
 });
+
 inputGithub.addEventListener('input', (event) => {
     card.github = event.currentTarget.value;
     upDatePreview();    
@@ -130,32 +131,39 @@ inputGithub.addEventListener('input', (event) => {
 resetPreviewButton.addEventListener('click', (event) => {
     cardName.innerHTML = 'Nombre Apellido'
     cardJob.innerHTML = 'Front-end developer'
+    profileImage.style.backgroundImage = `url("images/portrait.jpg")`;
+    profilePreview.style.backgroundImage = `url("")`;
     cardMobile.href = ''
     cardEmail.href = ''
     cardLinkedin.href = ''
     cardGithub.href = ''
-    form.reset()
+    form.reset();
+
+    localStorage.removeItem('card');
 });
 
 function upDatePreview () {
-     if (card.name === "" ) 
-    {cardName.innerHTML = 'Nombre Apellido'}
-    else {cardName.innerHTML = card.name;}
+    if (card.name === "" ) {
+        cardName.innerHTML = 'Nombre Apellido'
+    }
+    else {
+        cardName.innerHTML = card.name;
+    }
     
-    if (card.job === "" ) 
-    {cardJob.innerHTML = 'Front-end developer'}
-    else {cardJob.innerHTML = card.job;}
+    if (card.job === "" ) {
+        cardJob.innerHTML = 'Front-end developer'
+    }
+    else {
+        cardJob.innerHTML = card.job;
+    }
+
     cardEmail.href = 'mailto:' + card.email;
     cardMobile.href = 'tel:' + card.phone;
     cardLinkedin.href = 'https://' + card.linkedin;
     cardGithub.href = 'https://' + card.github;
  }
-'use strict';
 
- const palette1 = document.querySelector(".js_palette1")
- const palette2 = document.querySelector(".js_palette2")
- const palette3 = document.querySelector(".js_palette3")
- const previewCard = document.querySelector(".js__previewCard")
+
 
 palette1.addEventListener('input',(event) => {
     card.palette = 1;
@@ -175,7 +183,8 @@ palette3.addEventListener('input',(event) => {
     previewCard.classList.add("palette3")
 })
 
-palette1.checked = true
+palette1.checked = true;
 
 import './get-avatar.js'
 import './localStorage.js'
+import './share.js'
