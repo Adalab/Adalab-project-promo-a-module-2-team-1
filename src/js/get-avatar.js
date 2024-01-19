@@ -33,7 +33,8 @@ function writeImage() {
    */
   profileImage.style.backgroundImage = `url(${fr.result})`;
   profilePreview.style.backgroundImage = `url(${fr.result})`;
-  data.photo = fr.result;
+  card.photo = fr.result;
+  localStorage.setItem('card', JSON.stringify(card));
 }
 
 
