@@ -12,11 +12,14 @@ const card = {
     github: ''
 };
 
+
 // QUERYSELECTOR
+
 //Palettes
 const palette1 = document.querySelector(".js_palette1")
 const palette2 = document.querySelector(".js_palette2")
 const palette3 = document.querySelector(".js_palette3")
+
 // Form
 const form = document.querySelector('.js_form');
 const inputName = document.querySelector('.js_name');
@@ -90,59 +93,105 @@ sheaderElement.addEventListener('click', (event) => {
 });
 
 
+// Palettes
 
-// buttonCreateElement.addEventListener('click', (event) => {
-//     TwitterElement.classList.toggle('share__hidden')
-// });
+palette1.addEventListener('input',(event) => {
+    card.palette = 1;
+    previewCard.classList.remove("palette1","palette2","palette3")
+    previewCard.classList.add("palette1")
+    setInLocalStorage();
+});
+
+palette2.addEventListener('input',(event) => {
+    card.palette = 2;
+    previewCard.classList.remove("palette1","palette2","palette3")
+    previewCard.classList.add("palette2")
+    setInLocalStorage();
+});
+
+palette3.addEventListener('input',(event) => {
+    card.palette = 3;
+    previewCard.classList.remove("palette1","palette2","palette3")
+    previewCard.classList.add("palette3")
+    setInLocalStorage();
+});
 
 
-// Tarjeta Preview
+// Card preview
+
 inputName.addEventListener('input', (event) => {
     card.name = event.currentTarget.value;
     upDatePreview();
+    setInLocalStorage();
 });
 
 inputJob.addEventListener('input', (event) => {
     card.job = event.currentTarget.value;
     upDatePreview();
+    setInLocalStorage();
 });
 
 inputEmail.addEventListener('input', (event) => {
     card.email = event.currentTarget.value;
     upDatePreview();
-    
+    setInLocalStorage();
 });
 
 inputPhone.addEventListener('input', (event) => {
     card.phone = event.currentTarget.value;
     upDatePreview();    
+    setInLocalStorage();
 });
 
 inputLinkedin.addEventListener('input', (event) => {
     card.linkedin = event.currentTarget.value;
-    upDatePreview();    
+    upDatePreview();   
+    setInLocalStorage(); 
 });
 
 inputGithub.addEventListener('input', (event) => {
-    card.github = event.currentTarget.value;
+    const cardGithubValue = event.currentTarget.value;
+    card.github = cardGithubValue.replace('@', '');
     upDatePreview();    
+    setInLocalStorage();
 });
 
 resetPreviewButton.addEventListener('click', (event) => {
     cardName.innerHTML = 'Nombre Apellido'
-    cardJob.innerHTML = 'Front-end developer'
+    cardJob.innerHTML = 'Front-end alien'
     profileImage.style.backgroundImage = `url("images/portrait.jpg")`;
     profilePreview.style.backgroundImage = `url("")`;
     cardMobile.href = ''
     cardEmail.href = ''
     cardLinkedin.href = ''
     cardGithub.href = ''
-    form.reset();
 
-    localStorage.removeItem('card');
+    inputName.value = '';
+    inputJob.value = '';
+    inputEmail.value = '';
+    inputPhone.value = '';
+    inputLinkedin.value = '';
+    inputGithub.value = '';
+
+    palette1.checked = true;
+    palette2.checked = false;
+    palette3.checked = false;
+    previewCard.classList.remove('palette2', 'palette3');
+    previewCard.classList.add('palette1');
+
+    card.palette = 1;
+    card.name = '';
+    card.job = '';
+    card.phone = '';
+    card.email = '';
+    card.linkedin = '';
+    card.github = '';
+    card.photo = '';
+
 });
 
-function upDatePreview () {
+function upDatePreview() {
+    
     if (card.name === "" ) {
         cardName.innerHTML = 'Nombre Apellido'
     }
@@ -151,7 +200,7 @@ function upDatePreview () {
     }
     
     if (card.job === "" ) {
-        cardJob.innerHTML = 'Front-end developer'
+        cardJob.innerHTML = 'Front-end alien'
     }
     else {
         cardJob.innerHTML = card.job;
@@ -160,30 +209,10 @@ function upDatePreview () {
     cardEmail.href = 'mailto:' + card.email;
     cardMobile.href = 'tel:' + card.phone;
     cardLinkedin.href = 'https://' + card.linkedin;
-    cardGithub.href = 'https://' + card.github;
- }
+    cardGithub.href = 'https://github.com/' + card.github;
+}
 
 
-
-palette1.addEventListener('input',(event) => {
-    card.palette = 1;
-    previewCard.classList.remove("palette1","palette2","palette3")
-    previewCard.classList.add("palette1")
-})
-
-palette2.addEventListener('input',(event) => {
-    card.palette = 2;
-    previewCard.classList.remove("palette1","palette2","palette3")
-    previewCard.classList.add("palette2")
-})
-
-palette3.addEventListener('input',(event) => {
-    card.palette = 3;
-    previewCard.classList.remove("palette1","palette2","palette3")
-    previewCard.classList.add("palette3")
-})
-
-palette1.checked = true;
 
 import './get-avatar.js'
 import './localStorage.js'

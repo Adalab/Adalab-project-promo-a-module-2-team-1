@@ -7,7 +7,13 @@ if( cardFromLS !== null ) {
 
   console.log(cardFromLS);
 
-  card.palette = cardFromLSasObject.palette;
+  if (card.palette === "" ) {
+    card.palette = 1;
+  }
+  else {
+    card.palette = cardFromLSasObject.palette;
+  }
+
   card.name = cardFromLSasObject.name;
   card.job = cardFromLSasObject.job;
   card.photo = cardFromLSasObject.photo;
@@ -18,13 +24,29 @@ if( cardFromLS !== null ) {
 
   // Render card data from LS
   cardName.innerHTML = cardFromLSasObject.name;
-  cardJob.innerHTML = cardFromLSasObject.job;
-  profileImage.style.backgroundImage = `url(${cardFromLSasObject.photo})`;
+  if (cardFromLSasObject.name === "" ) {
+    cardName.innerHTML = 'Nombre Apellido'
+  }
+  else {
+    cardName.innerHTML = cardFromLSasObject.name;
+  }
+  if (cardFromLSasObject.job === "" ) {
+    cardJob.innerHTML = 'Front-end alien'
+  }
+  else {
+    cardJob.innerHTML = cardFromLSasObject.job ;
+  }
+  if (cardFromLSasObject.photo) {
+    profileImage.style.backgroundImage = `url(${cardFromLSasObject.photo})`;
+  } 
+  else {
+    profileImage.style.backgroundImage = `url('./images/portrait.jpg')`;
+  }
   profilePreview.style.backgroundImage = `url(${cardFromLSasObject.photo})`;
   cardMobile.href = 'tel:' + cardFromLSasObject.phone;
   cardEmail.href = 'mailto:' + cardFromLSasObject.email;
   cardLinkedin.href = 'https://' + cardFromLSasObject.linkedin;
-  cardGithub.href = 'https://' + cardFromLSasObject.github;
+  cardGithub.href = 'https://github.com/' + cardFromLSasObject.github;
 
   // render input data
   inputName.value = cardFromLSasObject.name;
@@ -43,37 +65,22 @@ if( cardFromLS !== null ) {
   else if(cardFromLSasObject.palette === 3){
    palette3.checked = true;
   }
-
+  else {
+    palette1.checked = true;
+  }
 
 }
 
 else {
   form.reset();
   upDatePreview ();
+  cardName.innerHTML = 'Nombre Apellido';
+  palette1.checked = true;
+ 
 }
 
 
-function handleInput(event) {
-
-  console.log(event.currentTarget.id);
-
-  const prop = event.currentTarget.id;
-
-  card[prop] = event.currentTarget.value;
-
+// Set card data in LocalStorage
+function setInLocalStorage() {
   localStorage.setItem('card', JSON.stringify(card));
-
-  console.log(card);
 }
-
-  inputName.addEventListener('input', handleInput)
-  inputJob.addEventListener('input', handleInput)
-  profileImage.addEventListener('input', handleInput)
-  inputEmail.addEventListener('input', handleInput)
-  inputPhone.addEventListener('input', handleInput)
-  inputLinkedin.addEventListener('input', handleInput)
-  inputGithub.addEventListener('input', handleInput)
-  palette1.addEventListener('input', handleInput)
-  palette2.addEventListener('input', handleInput)
-  palette3.addEventListener('input', handleInput)
-
